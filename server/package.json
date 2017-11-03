@@ -1,0 +1,17 @@
+{
+  "name": "student_trsource",
+  "version": "1.0.0",
+  "description": "A student resource CRUD API",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Sixtus Innocent",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "mongoose": "^4.12.1"
+  }
+}
