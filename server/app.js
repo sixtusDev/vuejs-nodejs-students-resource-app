@@ -8,7 +8,7 @@ const studentsResource = require('./routes/studentsResource');
 const app = express();
 
 // Connect to mongodb
-mongoose.connect('mongodb://sixtus:123456@ds241875.mlab.com:41875/studentsresourceapp', { useMongoClient: true});
+mongoose.connect('mongodb://localhost/studentsResource', { useMongoClient: true});
 mongoose.Promise = global.Promise;
 
 // Body Parser middleware
@@ -22,7 +22,7 @@ app.use(function(req, res, next) {
   next();
 });
 
-app.use('/', studentsResource)
+app.use('/api/studentsresource', studentsResource)
 
 // Starting the server
 app.listen(process.env.PORT || 3000, () => {

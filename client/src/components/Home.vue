@@ -40,7 +40,7 @@ export default {
   },
   methods: {
     fetchResource () {
-      this.$http.get('https://tranquil-inlet-62239.herokuapp.com').then(response => {
+      this.$http.get('http://localhost:3000/api/studentsresource').then(response => {
         this.resources = response.body
       }).catch(err => {
         console.log(err)

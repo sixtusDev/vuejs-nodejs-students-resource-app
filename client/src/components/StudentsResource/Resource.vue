@@ -41,7 +41,7 @@
     },
     methods: {
       fetchResource () {
-        this.$http.get('https://tranquil-inlet-62239.herokuapp.com/' + this.id).then(response => {
+        this.$http.get('http://localhost:3000/api/studentsresource/' + this.id).then(response => {
           this.resource = response.body
         }).catch(err => {
           console.log(err)
@@ -50,7 +50,7 @@
       deleteResource () {
         var confirmDelete = confirm('Are you sure you want to delete this resource?')
         if (confirmDelete) {
-          this.$http.delete('https://tranquil-inlet-62239.herokuapp.com/' + this.id).then(response => {
+          this.$http.delete('http://localhost:3000/api/studentsresource/' + this.id).then(response => {
             this.$router.push({path: '/'})
           }).then(err => {
             console.log(err)

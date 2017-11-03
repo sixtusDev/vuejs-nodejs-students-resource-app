@@ -54,7 +54,7 @@
     },
     methods: {
       fetchResource () {
-        this.$http.get('https://tranquil-inlet-62239.herokuapp.com/' + this.$route.params.id).then(response => {
+        this.$http.get('http://localhost:3000/api/studentsresource/' + this.$route.params.id).then(response => {
           this.resource = response.body
         }).catch(err => {
           console.log(err)
@@ -71,7 +71,7 @@
           body: this.resource.body,
           date: new Date()
         }
-        this.$http.put('https://tranquil-inlet-62239.herokuapp.com/' + this.$route.params.id, updateResource).then(response => {
+        this.$http.put('http://localhost:3000/api/studentsresource/' + this.$route.params.id, updateResource).then(response => {
           this.$router.push({path: '/resources/' + this.$route.params.id})
         }).catch(err => {
           console.log(err)

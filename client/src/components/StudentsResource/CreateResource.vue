@@ -78,7 +78,7 @@
             body: this.body,
             date: new Date()
           }
-          this.$http.post('https://tranquil-inlet-62239.herokuapp.com', newResource).then(response => {
+          this.$http.post('http://localhost:3000/api/studentsresource', newResource).then(response => {
             this.$router.push({path: '/'})
           }).catch(err => {
             console.log(err)
